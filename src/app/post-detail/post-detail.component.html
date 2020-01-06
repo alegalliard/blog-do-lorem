@@ -1,0 +1,31 @@
+
+<div *ngIf="result">
+    <section>
+        <h1>{{result.content.post.title | uppercase}}</h1>
+        <small>Escrito por {{result.content.user.name}}</small>
+        <p>{{result.content.post.body}}</p>
+        
+    </section>
+    <article>
+        <h2>Sobre {{result.content.user.name}}</h2>
+        <p>Trabalha em {{result.content.user.company.name}}, que é uma empresa de {{result.content.user.company.catchPhrase}} 
+            fazendo {{result.content.user.company.bs}}. <br> Contato: {{result.content.user.email}} ou através do telefone {{result.content.user.phone}}
+        </p>
+
+    </article>
+    <!-- <app-open-close></app-open-close> -->
+    <button (click)="goBack()">Voltar</button>
+    
+    <div *ngIf="result.comments as comments">
+        <h3>Comentários</h3>
+        <article *ngFor="let comment of comments">
+            <h4>
+                {{comment.name}} 
+                <br />
+                <em>({{comment.email | lowercase}})</em> diz:
+            </h4>
+            <p>{{comment.body}}</p>
+            <hr />
+        </article>
+    </div>
+</div>
