@@ -1,0 +1,14 @@
+<section>
+    <section>
+        <h2>Últimas postagens</h2>
+
+        <div *ngIf="posts">
+            <article *ngFor="let post of posts; let i = index">
+                <h3>{{i + 1}}: {{post.title}}</h3>
+                <p>{{post.body | slice:0:100}}...</p>
+                <a routerLink="/post/{{post.id}}">Leia mais</a>
+                <hr>
+            </article>
+        </div>
+    </section>
+</section>
