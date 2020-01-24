@@ -1,0 +1,16 @@
+@import '../../assets/scss/vars';
+// Neumorphism https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6
+
+.login-card {
+    background-color: $bg-gradient;
+    width:300px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0, .1), -5px -5px 15px 5px rgba(255,255,255, 1);
+    border-radius: 1.0rem;
+    padding: 20px;
+
+    margin: 0 auto;
+
+    fieldset {
+        border: 0;
+    }
+}

@@ -5,8 +5,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  {
+    path: 'login', 
+    component: LoginComponent,
+    data: {
+      title: 'Login',
+      animation: 'DetailPage'
+    }
+  },
   {
     path: '', 
     component: PostsComponent,

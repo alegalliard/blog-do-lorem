@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/vars';
+
+body, html {
+    background: $bg-gradient;
+    height: 100vh;
+}

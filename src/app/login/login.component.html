@@ -1,0 +1,18 @@
+<form [formGroup]="form" class="login-card">
+    <fieldset>
+        <legend>Login</legend>
+        <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" formControlName="email" />
+        </div>
+        <div>
+            <label for="password">Senha</label>
+            <input type="password" id="password" formControlName="password" />
+        </div>
+        <div class="form-buttons">
+            <button class="btn" (click)="login()">Login</button>
+        </div>
+    </fieldset>
+</form>
+
+<!-- https://blog.angular-university.io/angular-jwt-authentication/ -->
